@@ -25,8 +25,7 @@
                 <td>{{$dsn->nama}}</td>
                 <td>{{$dsn->nip}}</td>
                 <td>{{$dsn->fakultas}}</td>
-                <td>{{optional($dsn->ktpeg)->jabatan }}</td>
-
+                <td>{{$dsn->ktpeg->jabatan}}</td>
                 <td>
                     <button type="button" class="btn btn-primary">Update</button>
                     <button type="button" class="btn btn-danger">Hapus</button>
