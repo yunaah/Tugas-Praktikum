@@ -11,6 +11,8 @@ class Dosen extends Model
 
     protected $table = 'dosen';
     protected $primaryKey = 'id_dosen';
+    protected $fillable = ['id_dosen', 'nip', 'email', 'nama', 'tanggal_lahir', 'no_hp'];
+    public $timestamps = false;
 
     public function ktpeg(){
         return $this->hasOne(ktpeg::class, 'id_dosen');

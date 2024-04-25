@@ -3,7 +3,7 @@
 @section('container')
     <h1 class="text-center">Data Mahasiswa</h1>
     <div class="mb-4">
-    <button type="button" class="btn btn-success ">Tambah Data</button>
+    <a href="mahasiswa/create"><button type="button" class="btn btn-success ">Tambah Data</button></a>
     </div>
     <div class="row">
         <table class="table">
@@ -28,7 +28,8 @@
                 <td>{{$mhs->alamat}}</td>
                 {{-- <td>{{$mhs->ktm->nomor_identitas}}</td> --}}
                 <td>
-                    <button type="button" class="btn btn-primary">Update</button>
+                  <a href="{{route('edit', $mhs->id_mahasiswa)}}">
+                    <button type="button" class="btn btn-primary">Update</button></a>
                     <button type="button" class="btn btn-danger">Hapus</button>
                 </td>
               </tr>

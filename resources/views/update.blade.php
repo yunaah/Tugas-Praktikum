@@ -11,25 +11,25 @@
 <body>
     <div class="container">
         <h2 class="mt-4">Form Update Data Mahasiswa</h2>
-        <form action="" method="">
+        <form action="{{route('update', $mahasiswa->id_mahasiswa)}}" method="POST">
             <div class="form-group">
                 <label for="nama">Nama:</label>
-                <input type="text" class="form-control" id="nama"  value="" required>
+                <input type="text" class="form-control" id="nama" name="nama" value="" required>
             </div>
 
             <div class="form-group">
                 <label for="nim">NIM:</label>
-                <input type="text" class="form-control" id="nim" value="" required>
+                <input type="text" class="form-control" id="nim" name="nim" value="" required>
             </div>
 
             <div class="form-group">
                 <label for="jurusan">Jurusan:</label>
-                <input type="text" class="form-control" id="jurusan" value="" required>
+                <input type="text" class="form-control" id="jurusan" name="jurusan" value="" required>
             </div>
 
             <div class="form-group">
                 <label for="alamat">Alamat:</label>
-                <input type="text" class="form-control" id="alamat"  value="" required>
+                <input type="text" class="form-control" id="alamat" name="alamat"  value="" required>
             </div>
 
             <button type="submit" class="btn btn-primary mt-3">Update</button>

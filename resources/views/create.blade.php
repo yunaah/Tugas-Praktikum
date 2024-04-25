@@ -11,25 +11,26 @@
 <body>
     <div class="container">
         <h2 class="mt-4">Form Tambah Data Mahasiswa</h2>
-        <form action="" method="">
+        <form action="{{route('store')}}" method="POST">
+            @csrf
             <div class="form-group">
                 <label for="nama">Nama:</label>
-                <input type="text" class="form-control" id="nama" required>
+                <input type="text" class="form-control" name="nama" id="nama" required>
             </div>
 
             <div class="form-group">
                 <label for="nim">NIM:</label>
-                <input type="text" class="form-control" id="nim"  required>
+                <input type="text" class="form-control" name="nim" id="nim"  required>
             </div>
 
             <div class="form-group">
                 <label for="jurusan">Jurusan:</label>
-                <input type="text" class="form-control" id="jurusan"  required>
+                <input type="text" class="form-control" name="jurusan" id="jurusan"  required>
             </div>
 
             <div class="form-group">
                 <label for="no_identitas">Alamat:</label>
-                <input type="text" class="form-control" id="no_identitas"  required>
+                <input type="text" class="form-control" name="alamat" id="no_identitas"  required>
             </div>
 
             <button type="submit" class="btn btn-primary mt-3">Tambah</button>
