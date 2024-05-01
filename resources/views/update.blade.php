@@ -12,6 +12,7 @@
     <div class="container">
         <h2 class="mt-4">Form Update Data Mahasiswa</h2>
         <form action="{{route('update', $mahasiswa->id_mahasiswa)}}" method="POST">
+            @csrf
             <div class="form-group">
                 <label for="nama">Nama:</label>
                 <input type="text" class="form-control" id="nama" name="nama" value="" required>

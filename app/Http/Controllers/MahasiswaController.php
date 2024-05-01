@@ -70,7 +70,7 @@ class MahasiswaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id_mahasiswa)
     {
         $request->validate([
             'nama' => 'required',
@@ -79,14 +79,23 @@ class MahasiswaController extends Controller
             'alamat' => 'required' 
         ]);
         $mahasiswa = Mahasiswa::find($id_mahasiswa);
-
+        $mahasiswa->nama = $request->nama;
+        $mahasiswa->nim = $request->nim;
+        $mahasiswa->jurusan = $request->jurusan;
+        $mahasiswa->alamat = $request->alamat;
+        $mahasiswa->save();
+        return redirect()->route('index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id_mahasiswa)
     {
-        //
+        $mahasiswa = Mahasiswa::findOrFail($id_mahasiswa);
+        $mahasiswa->delete();
+
+        return redirect()->route('index')->with('Success', 'Data mahasiswa berhasil dihapus.');
+    
     }
 }
